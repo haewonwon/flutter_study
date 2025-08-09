@@ -105,6 +105,51 @@ class SecondPage extends StatelessWidget {
                 ),
               ],
             ),
+            const SizedBox(height: 24),
+            
+            // 상품 페이지로 이동 버튼
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/products');
+                },
+                icon: const Icon(Icons.shopping_cart),
+                label: const Text('상품 카드 스와이퍼 보기'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  elevation: 4,
+                ),
+              ),
+            ),
+            
+            const SizedBox(height: 16),
+            
+            // 홈페이지로 이동 버튼
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home');
+                },
+                icon: const Icon(Icons.home),
+                label: const Text('마이페이지로 이동'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  elevation: 4,
+                ),
+              ),
+            ),
           ],
         ),
       ),

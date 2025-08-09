@@ -1,9 +1,8 @@
-// lib/main.dart
-
 import 'package:flutter/material.dart';
 // 상대 경로: main.dart가 lib/ 바로 아래 있다면 이렇게
 // import 'pages/home_page.dart';
 import 'pages/second_page.dart';
+import 'pages/product_swiper_page.dart';
 
 // 또는 패키지 임포트(프로젝트 이름을 pubspec.yaml의 name: 과 맞추세요)
 // import 'package:your_app_name/pages/home_page.dart';
@@ -15,11 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Publit App',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
       initialRoute: '/',
-
       routes: {
         '/': (context) => SecondPage(),
-        // '/second': (context) => SecondPage(),
+        '/products': (context) => ProductSwiperPage(),
       },
     );
   }
